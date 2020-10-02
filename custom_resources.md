@@ -12,6 +12,20 @@
 **Purpose:** The apache resource handles the installation and configuration of the apache webserver as part of the apache cookbook.
 
 ### Properties
+
+- :name
+- :user
+- :group
+- :directory_list
+- :package_list
+- :mod_list
+- :web_root
+- :http_port
+- :php_version
+- :fpm_backend
+- :fpm_port
+- :demo_structure
+
 #### :name
 - Purpose: The resource name which can be used in its actions.
 - Ruby Type(s): `String`
@@ -74,6 +88,21 @@
 - Default Value: `node[:apache][:init][:demo_structure]`
 
 ### Actions
+
+- :clear_sites
+- :configure_apache
+- :configure_envvars
+- :configure_fpm_conf
+- :configure_multisite
+- :configure_ports
+- :create_web_root
+- :enable
+- :install
+- :restart
+- :set_permissions
+- :stop
+- :uninstall
+
 ####  :clear_sites
 Loops through all of the available and enabled apache sites and deletes them so that accurately-configured virtual hosts can be created based on the supplied demo structure in `config.json`.
 
